@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+
+<body>
+    <script>
+        
+        class Stack {
+            constructor(){
+                this.stack = []
+                this.size = 6
+            }
+
+            add(element){
+
+                if(this.stack.length < this.size){
+                    this.stack.push(element)
+                } else{
+                    console.log("Stack Overflow");
+                }
+            }
+
+            travel(){
+                console.log(this.stack);
+                if(this.stack.length === 0){
+                    console.log("Stack underflow");
+                }
+            }
+            isEmpty(){
+
+            }
+            delete(){
+                if(this.stack.length === 0){
+                    console.log("underfow");
+                }
+                this.stack.pop()
+            }
+        }
+        const stack = new Stack()
+
+        stack.add(1)
+        stack.add(2)
+        stack.add(3)
+        stack.add(4)
+        stack.add(5)
+        stack.add(6)
+        stack.add(7)
+        stack.delete()
+
+
+
+        stack.travel()
+
+        // let str = "Hello"
+        // // console.log(str);
+        // let arr = []
+        // arr.push(...str)
+
+        // console.log(arr);
+    </script>
+</body>
+
+</html>
